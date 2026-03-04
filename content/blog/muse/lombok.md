@@ -3,7 +3,7 @@ title: Lombok...is this week's muse
 date: 2016-07-01
 description: Eliminate boiler plate code with project Lombok
 categories:
- - muse
+  - muse
 draft: true
 ---
 

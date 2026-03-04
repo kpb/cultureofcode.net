@@ -4,9 +4,9 @@ date: 2020-09-04
 lastmod: 2020-09-10
 description: Beautiful short ski film from DPS Skis.
 categories:
- - fridays
+  - fridays
 images:
- - image/twitter/reverie-film.png
+  - image/twitter/reverie-film.png
 draft: true
 ---
 
@@ -18,5 +18,4 @@ _...because there’s more to life than technology._
 One of a set of beautifully filmed short ski videos.
 
 {{< vimeo  148910816 >}}
-
 

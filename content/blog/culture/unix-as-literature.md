@@ -3,7 +3,7 @@ title: Unix as Literature
 date: 2016-01-18
 lastmod: 2024-05-10
 description: UNIX remains rooted in the culture of the word.
-category:
+categories:
   - culture
 draft: false
 ---

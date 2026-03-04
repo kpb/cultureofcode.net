@@ -2,11 +2,11 @@
 title: "Reckon...is this week's muse"
 date: 2020-04-12T11:48:32-06:00
 categories:
-- muse
+  - muse
 tags:
-- gradle
-- git
-- release
+  - gradle
+  - git
+  - release
 description: Reckon is a Gradle plugin to infer your project's version number without the ridiculousness of hard-coding it in build files.
 draft: true
 ---
