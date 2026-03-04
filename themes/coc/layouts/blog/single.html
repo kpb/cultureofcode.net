@@ -9,9 +9,9 @@
     </p>
     <p class="post-meta fs-6">
       by <a href="{{ .Site.Params.authorUrl }}">{{ .Site.Params.authorDisplayName }}</a>
-      {{ with .Params.categories }} in
-      {{ range . }}
-      <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+      {{ with .GetTerms "categories" }} in
+      {{ range $index, $term := . }}{{ if $index }}, {{ end }}
+      <a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>
       {{ end }}
       {{ end }}
     </p>
