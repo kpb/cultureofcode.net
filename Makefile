@@ -17,7 +17,7 @@ build: ## Build the site.
 
 .PHONY: try
 try: ## Build the site and run a local server on localhost:1313.
-	hugo server -vw
+	hugo server --watch
 
 .PHONY: deploy
 deploy: check-deploy-vars build ## Build and deploy site to production web server.

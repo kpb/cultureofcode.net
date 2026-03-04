@@ -17,7 +17,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.126.0
+      HUGO_VERSION: 0.154.5
       DEPLOY_USER: "${{ secrets.DEPLOY_USER }}"
       DEPLOY_HOST: "${{ secrets.DEPLOY_HOST }}"
       DEPLOY_KEY: "${{ secrets.SSH_DEPLOY_KEY }}"
@@ -36,7 +36,7 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6.0.1
       with:
         # for checking out a theme from a dif repo
         submodules: recursive

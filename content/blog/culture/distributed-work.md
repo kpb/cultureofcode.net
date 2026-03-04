@@ -1,7 +1,7 @@
 ---
 title: "Distributed Work"
 date: 2020-03-22
-lastmod: 2020-11-5
+lastmod: 2020-11-05
 categories:
   - culture
 tags:
