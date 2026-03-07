@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<main role="main" class="container pt-3 main">
+  <h2 class="pb-2">404 The page you're looking for isn't here</h2>
+
+  <p class="mb-3">
+    We checked twice. Then we blamed DNS.
+  </p>
+
+  <p class="mb-4">
+    <a href="{{ .Site.BaseURL }}">Take me home</a>
+  </p>
+
+  <p class="post-meta">
+    Possible causes: typo, chaos, entropy.
+  </p>
+</main>
+
+{{ end }}
