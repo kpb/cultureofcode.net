@@ -15,6 +15,16 @@ check-deploy-vars: ## Ensure deploy vars have been set
 build: ## Build the site.
 	hugo
 
+.PHONY: lint
+lint: ## Run local formatting/lint checks.
+	npm run format:check
+	npm run toml:check
+
+.PHONY: format
+format: ## Auto-format supported files.
+	npm run format
+	npm run toml:format
+
 .PHONY: try
 try: ## Build the site and run a local server on localhost:1313.
 	hugo server --watch
@@ -25,8 +35,8 @@ deploy: check-deploy-vars build ## Build and deploy site to production web serve
 
 # clean up the build
 .PHONY: clean
-clean: ## Delete the build directory
-	rm -rf $(BUILD_DIR)
+clean: ## Delete build and local dependency artifacts
+	rm -rf $(BUILD_DIR) node_modules
 
 # Thanks to https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 .PHONY: help

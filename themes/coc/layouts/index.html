@@ -1,30 +1,30 @@
 {{ define "main" }}
+  <main role="main" class="container pt-3 main">
+    <!-- whatever's in content/_index.md -->
+    {{ .Content }}
 
-<main role="main" class="container pt-3 main">
-
-  <!-- whatever's in content/_index.md -->
-  {{ .Content }}
-
-  {{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog") }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog") }}
     {{ range $paginator.Pages.ByLastmod.Reverse }}
 
-  <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-  <p class="mb-4">{{ with .Param "description" }} {{ . }} {{ else }} {{ .Summary | plainify }} {{ end}}</p>
-  
-  {{ end }}
+      <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+      <p class="mb-4">
+        {{ with .Param "description" }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}
+      </p>
+    {{ end }}
 
-  <div class="pagination pb-3">
-    <p>
-      {{ range $paginator.Pagers }}
-      <a class="ml-2{{ if eq . $paginator }} current-page{{ end }}" href="{{ .URL | relURL }}">{{ .PageNumber }}</a>&nbsp;&nbsp;...
-      {{ end }}
 
-      {{ if $paginator.HasNext }}
-      <a class="ml-2" href="{{ $paginator.Next.URL }}">next</a>
-      {{ end }}
-    </p>
-  </div>
+    <div class="pagination pb-3">
+      <p>
+        {{ range $paginator.Pagers }}
+          <a class="ml-2{{ if eq . $paginator }}current-page{{ end }}" href="{{ .URL | relURL }}"
+            >{{ .PageNumber }}</a
+          >&nbsp;&nbsp;...
+        {{ end }}
 
-</main>
-
+        {{ if $paginator.HasNext }}
+          <a class="ml-2" href="{{ $paginator.Next.URL }}">next</a>
+        {{ end }}
+      </p>
+    </div>
+  </main>
 {{ end }}

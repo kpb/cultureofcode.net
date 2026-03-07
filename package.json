@@ -1,0 +1,17 @@
+{
+  "name": "cultureofcode-net",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local formatting and lint checks for cultureofcode.net",
+  "scripts": {
+    "format": "prettier --plugin prettier-plugin-go-template --write \"{README.md,AGENTS.md,*.json,**/*.html}\"",
+    "format:check": "prettier --plugin prettier-plugin-go-template --check \"{README.md,AGENTS.md,*.json,**/*.html}\"",
+    "toml:format": "taplo fmt hugo.toml taplo.toml",
+    "toml:check": "taplo fmt --check hugo.toml taplo.toml"
+  },
+  "devDependencies": {
+    "@taplo/cli": "^0.7.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15"
+  }
+}
