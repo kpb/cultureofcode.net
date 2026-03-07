@@ -3,10 +3,11 @@
 
 /*
    Colors from https://fabianburghardt.de/swisscolors/
-   color: # 0f0a01
+   text/titles: #111111
    background: #fbfbfb
-   emphasis: #558a86
-   links: #08327d
+   links: #0057b8
+   links-hover: #003e85
+   muted text: #555555
  */
 
 html {
@@ -16,39 +17,43 @@ html {
 body {
   font-family: "Source Sans 3", sans-serif;
   font-size: 1.2rem;
-  color: #0f0a01;
+  color: #111111;
   background-color: #fbfbfb;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans 3", sans-serif;
+  color: #111111;
 }
 
 a {
-  color: #08327d;
+  color: #0057b8;
   text-decoration: none;
 }
 
-a:hover {
-  color: #08327d;
-  border-bottom: 1px solid #08327d;
+a:hover,
+a:focus-visible {
+  color: #003e85;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
 }
 
 .post-meta {
-  color: #558a86;
+  color: #555555;
   font-family: "Source Sans 3", sans-serif;
 }
 
 blockquote {
   color: #666666;
-  border-left: 4px solid #558a86;
+  border-left: 4px solid #555555;
   padding-left: 1.5rem;
   letter-spacing: -1px;
   font-style: italic;
 }
 
 .pagination  .current-page {
-  color: #558a86;
+  color: #111111;
   text-decoration: none;
 }
 
@@ -58,7 +63,7 @@ footer {
 
 footer footer h1, footer h2 , footer h3,
 footer h4, footer h5, footer h6 {
-  color: #558a86;
+  color: #111111;
 }
 
 /* navbar */
@@ -68,22 +73,26 @@ footer h4, footer h5, footer h6 {
 
 a.navbar-brand {
   font-size: 2.0rem;
+  color: #111111;
+  text-decoration: none;
 }
 
 a.nav-link {
   font-size: 1.5rem;
-  color: #0f0a01;
+  color: #111111;
+  text-decoration: none;
 }
 
-a.nav-link:hover {
-  color: #08327d;
-  border-bottom: 1px solid #08327d;
+a.nav-link:hover,
+a.nav-link:focus-visible {
+  color: #003e85;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
 }
 
-.navbar-brand {
-  color: #558a86;
-}
-
-a.navbar-brand:hover {
-  color: #08327d;
+a.navbar-brand:hover,
+a.navbar-brand:focus-visible {
+  color: #003e85;
+  text-decoration: none;
 }
