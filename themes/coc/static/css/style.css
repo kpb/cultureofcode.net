@@ -44,6 +44,23 @@ a:focus-visible {
   font-family: "Source Sans 3", sans-serif;
 }
 
+.tag-list {
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.55rem;
+}
+
+.tag-link {
+  text-decoration: none;
+}
+
+.tag-link:hover,
+.tag-link:focus-visible {
+  text-decoration: underline;
+}
+
 blockquote {
   color: #666666;
   border-left: 4px solid #555555;

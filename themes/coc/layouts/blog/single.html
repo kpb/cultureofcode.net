@@ -6,8 +6,10 @@
         {{ .Lastmod.Format "2 January 2006" }}
       </p>
       <p class="post-meta fs-6">
+        {{ $categories := .GetTerms "categories" }}
+        {{ $tags := .GetTerms "tags" }}
         by <a href="{{ .Site.Params.authorUrl }}">{{ .Site.Params.authorDisplayName }}</a>
-        {{ with .GetTerms "categories" }}
+        {{ with $categories }}
           in
           {{ range $index, $term := . }}
             {{ if $index }},{{ end }}
@@ -15,6 +17,14 @@
           {{ end }}
         {{ end }}
       </p>
+      {{ with $tags }}
+        <p class="post-meta fs-6 tag-list">
+          {{ range $index, $term := . }}
+            {{ if $index }} {{ end }}
+            <a class="tag-link" href="{{ $term.RelPermalink }}">#{{ lower $term.LinkTitle }}</a>
+          {{ end }}
+        </p>
+      {{ end }}
 
       <!-- whatever's in the post's md file -->
       {{ .Content }}
