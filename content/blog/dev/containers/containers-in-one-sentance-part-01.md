@@ -1,17 +1,21 @@
 ---
-title: "Containers in one sentence (and why you should care)"
-date: 2026-03-10
+title: "Containers in one sentence"
+date: 2026-03-23
 slug: "containers-one-sentence-01"
-tags: ["containers", "devops", "history",]
+description: "First part in a series: Containers: How We Learned to Stop Worrying and Love the Host Kernel."
+tags: ["containers", "devops", "history"]
 categories: ["dev"]
+series: "containers"
+series_title: "Containers: How We Learned to Stop Worrying and Love the Host Kernel"
+series_part: 1
+series_total: 12
+series_next: "/blog/dev/containers/containers-prehistory-chroot-02/"
+series_toc: "/blog/dev/containers/"
 draft: false
 ---
 
-First part in a series: _Containers, from roots to reality_
-<!--more-->
-
-A container is a process with isolation and resource limits, packaged with its dependencies, so it runs consistently
-across environments.
+A container is a process with isolation and resource controls (including accounting), created from an image, so it runs
+consistently on any compatible host.
 
 That’s it. That’s the trick. The rest is people arguing on the internet.
 
@@ -46,7 +50,7 @@ treating them like magical safety bubbles.
 If you mix these up, you’ll eventually attend a meeting where everyone nods and nothing deploys.
 
 _Container Image_: a standardized blueprint containing all the necessary files and configurations needed to run that
-application. It’s immutable, portable, and just sits there, quietly judging you.
+application. It’s immutable, portable accross compatible platforms, and just sits there, quietly judging you.
 
 _Container_: a live, running instance of that package. A process with isolation and limits.
 
@@ -74,7 +78,7 @@ are more scalable, especially once you add orchestration.
 
 A container is like shipping your app in a standardized crate. The crate doesn’t change the truck. It
 makes the contents predictable and easy to move. You can label crates with version numbers, stack them into deployments,
-and swap them fast to rollbacks.
+and swap them fast to rollback.
 
 The crate is not bulletproof armor. It’s a crate.
 

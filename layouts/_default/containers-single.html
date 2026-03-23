@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <main role="main" class="flex-shrink-0 mb-5">
+    <div class="container">
+      <h2 class="pb-3">{{ .Title }}</h2>
+      <p class="post-meta fs-6 mb-1">
+        {{ .Lastmod.Format "2 January 2006" }}
+      </p>
+      <p class="post-meta fs-6">
+        {{ $categories := .GetTerms "categories" }}
+        {{ $tags := .GetTerms "tags" }}
+        by <a href="{{ .Site.Params.authorUrl }}">{{ .Site.Params.authorDisplayName }}</a>
+        {{ with $categories }}
+          in
+          {{ range $index, $term := . }}
+            {{ if $index }},{{ end }}
+            <a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>
+          {{ end }}
+        {{ end }}
+      </p>
+      {{ with $tags }}
+        <p class="post-meta fs-6 tag-list">
+          {{ range $index, $term := . }}
+            {{ if $index }} {{ end }}
+            <a class="tag-link" href="{{ $term.RelPermalink }}">#{{ lower $term.LinkTitle }}</a>
+          {{ end }}
+        </p>
+      {{ end }}
+
+      {{ if eq .Params.series "containers" }}
+        {{ partial "series-nav.html" . }}
+        {{ if gt .WordCount 1200 }}
+          <div class="series-post-toc mb-4">
+            <h3 class="h5">On This Page</h3>
+            {{ .TableOfContents }}
+          </div>
+        {{ end }}
+      {{ end }}
+
+      {{ .Content }}
+
+      {{ if eq .Params.series "containers" }}
+        {{ partial "series-nav.html" . }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

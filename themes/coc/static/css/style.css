@@ -113,3 +113,22 @@ a.navbar-brand:focus-visible {
   color: #003e85;
   text-decoration: none;
 }
+
+.series-nav {
+  background-color: #ffffff;
+}
+
+.series-nav__eyebrow {
+  font-weight: 600;
+}
+
+.series-post-toc {
+  padding: 1rem 1.25rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+}
+
+.series-post-toc ul {
+  margin-bottom: 0;
+}

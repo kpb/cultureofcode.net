@@ -1,0 +1,16 @@
+{{ if and .Params.series .Params.series_part .Params.series_total .Params.series_toc }}
+  <div class="series-nav border rounded p-3 mb-4">
+    <p class="series-nav__eyebrow post-meta mb-2">
+      Part {{ .Params.series_part }} of {{ .Params.series_total }} &mdash; {{ .Params.series_title }}
+    </p>
+    <div class="series-nav__links d-flex flex-wrap gap-3">
+      <a href="{{ .Params.series_toc }}">Series ToC</a>
+      {{ with .Params.series_prev }}
+        <a href="{{ . }}">Previous</a>
+      {{ end }}
+      {{ with .Params.series_next }}
+        <a href="{{ . }}">Next</a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
