@@ -14,8 +14,8 @@ series_toc: "/blog/dev/containers/"
 draft: false
 ---
 
-A container is a process with isolation and resource controls (including accounting), created from an image, so it runs
-consistently on any compatible host.
+A container is an isolated, resource-controlled process created from an image, so it runs consistently on any compatible
+host.
 
 That’s it. That’s the trick. The rest is people arguing on the internet.
 
