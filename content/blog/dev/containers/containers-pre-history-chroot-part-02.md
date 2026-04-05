@@ -73,5 +73,5 @@ the result of composing multiple isolation and control mechanisms, not one cleve
 
 ## Sources
 
-- Linux Foundation overview (roots of containers; includes historical context for _chroot_): https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers  
-- Version 7 Unix context (often cited in the _chroot_ timeline): https://en.wikipedia.org/wiki/Version_7_Unix  
+- Linux Foundation overview (roots of containers; includes historical context for _chroot_): https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers
+- Version 7 Unix context (often cited in the _chroot_ timeline): https://en.wikipedia.org/wiki/Version_7_Unix
